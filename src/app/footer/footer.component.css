@@ -1,0 +1,20 @@
+.footer {
+  bottom: 0;
+
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #3c8dbc;
+  color: white;
+
+}
+
+.footer-copyright{
+  color: white;
+  text-align: center;
+}
+.anchor{
+  color: white;
+}

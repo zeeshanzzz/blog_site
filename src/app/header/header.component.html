@@ -1,0 +1,61 @@
+<div class="jumbotron cntr">
+  <nav class="navbar navbar-expand-lg navbar-light ">
+    <div class="container">
+
+      <div class="nav-icon" (click)="toggleMenu()"><i class="fa fa-bars"></i></div>
+<!--      <div *ngIf="menu" class="mobile-tabs">-->
+<!--        <ul>-->
+<!--          <li>-->
+<!--            <a href="/login" class="nav-link" routerLink="login">Login</a>-->
+<!--            <button type="submit" class="btn" (click)="addNewBlog()">-->
+<!--            Add New Blog-->
+<!--          </button>-->
+<!--          </li>-->
+<!--          <li>  <button type="submit" class="btn" (click)="viewBlogs()">-->
+<!--            My Blogs-->
+<!--          </button></li>-->
+<!--          <li>  <button type="submit" class="btn" (click)="viewAllBlogs()">-->
+<!--            All Blogs-->
+<!--          </button></li>-->
+<!--          <li> <button type="submit" class="btn" (click)="logout()">-->
+<!--            Logout-->
+<!--          </button></li>-->
+<!--        </ul>-->
+
+
+
+<!--      </div>-->
+
+      <ul class="navbar-nav justify-content-end mt-2 mt-lg-0 display-none">
+
+        <li class="nav-item active">
+          <a href="/dashboard" class="btn" routerLink="dashboard">Home</a>
+<!--          <button type="submit" class="btn" (click)="addNewBlog()">-->
+<!--            Home-->
+<!--          </button>-->
+        </li>
+
+        <li class="nav-item active">
+          <a href="/blogs" class="btn" routerLink="blogs">Blogs</a>
+        </li>
+
+        <li class="nav-item active">
+          <a href="/about" class="btn" routerLink="about">About Us</a>
+        </li>
+        <li class="nav-item active">
+          <a href="/contact" class="btn" routerLink="contact">Contact Us</a>
+        </li>
+        <li class="nav-item active">
+          <a href="/login" class="btn" routerLink="login">Login</a>
+        </li>
+        <!-- <li class="nav-item active">
+          <button type="submit" class="btn" (click)="hitId()">
+            Hit by ID
+          </button>
+        </li> -->
+
+      </ul>
+
+    </div>
+  </nav>
+</div>
