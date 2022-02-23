@@ -22,12 +22,26 @@ export class BlogauthService {
   constructor() {
 
   }
+  logout() {
+    localStorage.removeItem('userExist');
+    // this.router.navigate(['']);
+  }
+isUserExist(){
+    return  localStorage.getItem("userExist")!==null;
 
+}
+  getUserName(){
+    return  localStorage.getItem("userExist")
+
+  }
   login(authModel: Authmodel) {
     console.log("authdata:"+authModel.email)
     console.log("authdata:"+authModel.password)
  var isUserExist=  this.userAuth.some(value => value.email == authModel.email && value.password == authModel.password);
     console.log("userExist:"+isUserExist)
+    if(isUserExist) {
+      localStorage.setItem("userExist",authModel.email);
+    }
     return isUserExist
 
     //   this.userAuth.forEach((item) => {

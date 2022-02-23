@@ -1,1 +1,25 @@
-<p>blogs works!</p>
+<div>
+  <div class="blog">
+    <div class="container">
+      <ul *ngFor="let data of userBlogs  |  orderBy: '-created';  let i = index " >
+        <div class="blog-image">
+          <img src="{{data.metadata.blogImage}} " height=200px width=200px  *ngIf="currentUser==data.metadata.author">
+        </div>
+        <h3  *ngIf="currentUser==data.metadata.author">{{data.title}}</h3>
+        <p  *ngIf="currentUser==data.metadata.author">Author: {{data.metadata.author}}</p>
+        <div class="blog-content">
+          <p [innerHTML]=data.metadata.description  *ngIf="currentUser==data.metadata.author"></p>
+          <a href="/postdetails"  *ngIf="currentUser==data.metadata.author" class="btn btn-success" routerLink="postdetails" [queryParams]="{post_id: data._id}">Read more...</a>
+          <a href="/postdetails" *ngIf="currentUser==data.metadata.author" class="btn btn-edit" routerLink="creteBlog" [queryParams]="{post_id: data._id}">Edit</a>
+
+        </div>
+
+      </ul>
+
+    </div>
+
+
+  </div>
+
+
+</div>

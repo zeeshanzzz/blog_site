@@ -31,12 +31,9 @@
   border: 2px solid #3c8dbc;
   color: #3c8dbc;
 }
-.blog .btn-edit{
-  border-radius: 0;
+.back-btn {
   background: #3c8dbc;
-  border: 2px solid #3c8dbc;
-  color: #fff;
-  margin-left: 10px;
-  transition:all 0.5s;
-  padding: 5px;
+  padding: 6px 20px;
+  color:#fff !important;
+  margin: 10px;
 }

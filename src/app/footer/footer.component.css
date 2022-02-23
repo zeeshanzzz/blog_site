@@ -1,13 +1,14 @@
 .footer {
   bottom: 0;
 
-  position: absolute;
+  position: fixed;
   text-align: center;
   width: 100%;
   /* Set the fixed height of the footer here */
   height: 60px;
   background-color: #3c8dbc;
   color: white;
+  overflow: hidden;
 
 }
 

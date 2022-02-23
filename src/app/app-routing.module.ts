@@ -5,6 +5,8 @@ import {DashbaordComponent} from "./dashbaord/dashbaord.component";
 import {BlogsComponent} from "./blogs/blogs.component";
 import {AboutUsComponent} from "./about-us/about-us.component";
 import {ContactComponent} from "./contact/contact.component";
+import {PostDetailComponent} from "./post-detail/post-detail.component";
+import {CreateBlogComponent} from "./create-blog/create-blog.component";
 
 const routes: Routes = [
 
@@ -13,6 +15,10 @@ const routes: Routes = [
   { path: 'blogs', component: BlogsComponent },
   { path: 'about', component: AboutUsComponent },
   { path: 'contact', component: ContactComponent },
+  { path: 'dashboard/postdetails', component: PostDetailComponent },
+  { path: 'creteBlog', component: CreateBlogComponent },
+  { path: 'dashboard/creteBlog', component: CreateBlogComponent },
+  { path: '', component: DashbaordComponent },
 
 ];
 
