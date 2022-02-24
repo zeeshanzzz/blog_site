@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit ,OnDestroy {
     // originator has notified me. refresh my data here.
   });
   isUserExist=false
+  userName:string|null="";
   constructor(private blogauthService:BlogauthService ,private route:Router ,private dataService: ViewObserverService ,private activeRoute: ActivatedRoute
   ) {
 
@@ -39,6 +40,7 @@ export class HeaderComponent implements OnInit ,OnDestroy {
 
   ngOnInit() {
     this.isUserExist = this.blogauthService.isUserExist()
+    this.userName =this.blogauthService.getUserName()
   }
   ngOnDestroy() {
     this.notifierSubscription.unsubscribe();
