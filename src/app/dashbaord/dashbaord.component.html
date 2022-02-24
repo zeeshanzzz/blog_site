@@ -1,7 +1,8 @@
 <div>
 <div class="blog">
   <div class="container">
-    <ul *ngFor="let data of userBlogs  |  orderBy: '-created';  let i = index ">
+    <input type="text" placeholder="Search" style="padding: 5px; margin: 10px;" name="search" id="search" [(ngModel)]="search" (keyup)="searchBlogs()">
+    <ul *ngFor="let data of filteredBlogs  |  orderBy: '-created';  let i = index ">
       <div class="blog-image">
         <img src="{{data.metadata.blogImage}}" height=200px width=200px>
       </div>

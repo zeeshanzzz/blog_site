@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import {ReactiveFormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { HeaderComponent } from './header/header.component';
 import { DashbaordComponent } from './dashbaord/dashbaord.component';
 import { AboutUsComponent } from './about-us/about-us.component';
@@ -31,13 +31,14 @@ import {NgPipesModule} from 'ngx-pipes';
     PostDetailComponent,
     CreateBlogComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    NgxEditorModule,
-    NgPipesModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        NgxEditorModule,
+        NgPipesModule,
+        FormsModule
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
