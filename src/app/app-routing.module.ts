@@ -16,6 +16,7 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
   { path: 'contact', component: ContactComponent },
   { path: 'dashboard/postdetails', component: PostDetailComponent },
+  { path: 'postdetails', component: PostDetailComponent },
   { path: 'creteBlog', component: CreateBlogComponent },
   { path: 'dashboard/creteBlog', component: CreateBlogComponent },
   { path: '', component: DashbaordComponent },
