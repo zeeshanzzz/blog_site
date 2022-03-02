@@ -16,6 +16,9 @@ import { PostDetailComponent } from './post-detail/post-detail.component';
 import { CreateBlogComponent } from './create-blog/create-blog.component';
 import {NgxEditorModule} from "ngx-editor";
 import {NgPipesModule} from 'ngx-pipes';
+import { SignupComponent } from './signup/signup.component';
+import {BlogauthService} from "./service/blogauth.service";
+import { SearchFilterPipe } from './search-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -29,7 +32,9 @@ import {NgPipesModule} from 'ngx-pipes';
     FooterComponent,
     ContactComponent,
     PostDetailComponent,
-    CreateBlogComponent
+    CreateBlogComponent,
+    SignupComponent,
+    SearchFilterPipe
   ],
     imports: [
         BrowserModule,
@@ -39,7 +44,7 @@ import {NgPipesModule} from 'ngx-pipes';
         NgPipesModule,
         FormsModule
     ],
-  providers: [],
+  providers: [BlogauthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

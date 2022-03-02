@@ -7,6 +7,7 @@ import {AboutUsComponent} from "./about-us/about-us.component";
 import {ContactComponent} from "./contact/contact.component";
 import {PostDetailComponent} from "./post-detail/post-detail.component";
 import {CreateBlogComponent} from "./create-blog/create-blog.component";
+import {SignupComponent} from "./signup/signup.component";
 
 const routes: Routes = [
 
@@ -18,6 +19,7 @@ const routes: Routes = [
   { path: 'dashboard/postdetails', component: PostDetailComponent },
   { path: 'postdetails', component: PostDetailComponent },
   { path: 'creteBlog', component: CreateBlogComponent },
+  { path: 'signup', component: SignupComponent },
   { path: 'dashboard/creteBlog', component: CreateBlogComponent },
   { path: '', component: DashbaordComponent },
 

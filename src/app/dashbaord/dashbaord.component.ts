@@ -32,4 +32,8 @@ export class DashbaordComponent implements OnInit {
     }
   }
 
+  onDeleteClick(_id: any) {
+    this.filteredBlogs = this.userBlogs.filter(s => s._id.toLowerCase()!=_id);
+    this.userBlogs =this.filteredBlogs;
+  }
 }
