@@ -17,6 +17,9 @@ export class SignupComponent implements OnInit {
 
     this.loginForm = this.fb.group({
       'email': ['', Validators.required],
+      'firstName': ['', Validators.required],
+      'lastName': ['', Validators.required],
+      'username': ['', Validators.required],
       'password': ['', Validators.required],
 
     });
@@ -27,19 +30,30 @@ export class SignupComponent implements OnInit {
       return
     }
     const credentials = this.loginForm.value;
-    var isUserExist = this.blogauthService.signUp(credentials)
-    if (isUserExist) {
-      this.message = "Successfully Logged in"
-      //  window.location.reload();
-      setTimeout(()=>{
+  this.blogauthService.signUp(credentials).subscribe(data => {
+      console.log("signUpData:"+data?.message)
+     var isUserExist= data?.success;
+      if (isUserExist) {
+        localStorage.setItem("accessToken",data.accessToken);
+        this.message = "Successfully Logged in"
+        //  window.location.reload();
+        setTimeout(()=>{
+  
+          this.route.navigate(['/login']);
+  
+        } ,1500)
+  
+      } else {
+       this.message ="User Already exist"
+      }
 
-        this.route.navigate(['/login']);
-
-      } ,1500)
-
-    } else {
-     this.message ="User Already exist"
-    }
+  }
+  ,(err:any) => {
+   this.message = err
+    console.log("signUpDataError:"+err.message)
+  }
+  );
+  
   }
 
   ngOnInit(): void {

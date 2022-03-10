@@ -23,19 +23,17 @@
 
     <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
       <div>
-        <input formControlName="name" class="form-control" placeholder="Username" required>
+        <input formControlName="firstName" class="form-control" placeholder="FirstName" required>
+        <br>
+        <input formControlName="lastName" class="form-control" placeholder="LastName" required>
+        <br>
+        <input formControlName="username" class="form-control" placeholder="Username" required>
         <br>
         <input formControlName="email" class="form-control" placeholder="Email" required>
         <br>
         <input type=password formControlName="password" class="form-control" placeholder="Password" required>
         <br>
-        <input formControlName="designation" class="form-control" placeholder="Designation" required>
-        <br>
-        <input type="phoneNumber" formControlName="phone" class="form-control" placeholder="Phone" required>
-        <br>
-
-
-
+        
       </div>
 
       <button type="submit" class="btn btn-primary btn-block btn-flat" >SignUp</button>

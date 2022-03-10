@@ -13,6 +13,7 @@ import {Subscription} from "rxjs";
 export class HeaderComponent implements OnInit ,OnDestroy {
   notifierSubscription: Subscription = this.dataService.subjectNotifier.subscribe(notified => {
    // window.location.reload();
+   console.log("Header Change called")
     this.ngOnInit()
     // originator has notified me. refresh my data here.
   });

@@ -19,6 +19,7 @@ import {NgPipesModule} from 'ngx-pipes';
 import { SignupComponent } from './signup/signup.component';
 import {BlogauthService} from "./service/blogauth.service";
 import { SearchFilterPipe } from './search-filter.pipe';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { SearchFilterPipe } from './search-filter.pipe';
     PostDetailComponent,
     CreateBlogComponent,
     SignupComponent,
-    SearchFilterPipe
+    SearchFilterPipe,
+    
   ],
     imports: [
         BrowserModule,
@@ -42,7 +44,8 @@ import { SearchFilterPipe } from './search-filter.pipe';
         ReactiveFormsModule,
         NgxEditorModule,
         NgPipesModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
   providers: [BlogauthService],
   bootstrap: [AppComponent]
